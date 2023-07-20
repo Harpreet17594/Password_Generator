@@ -1,10 +1,13 @@
+//object created to store constraints for password
 const types = {
     upperCasedCharacters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     lowerCasedCharacters: "abcdefghijklmnopqrstuvwxyz",
     numericCharacters: "0123456789",
     specialCharacters: "!@#$%^&*()_+~\`|}{'[]:;?><,./-="
   }
-  const printValues = [
+
+
+const printValues = [
 
     // Function to randomly select an uppercase letters
     function upperCasedCharacters() {
@@ -28,7 +31,7 @@ const types = {
   ];
 
 
-  
+
 //function call on button to generatepassword click
   function generatePassword() 
   {
@@ -62,7 +65,9 @@ function writePassword()
 
 //clear button
   document.getElementById("clear").addEventListener("click", eraseText);
+//function to erase text
   function eraseText() 
   {
+        //it will set the value to an empty string
       document.getElementById("password").value = "";
   }
