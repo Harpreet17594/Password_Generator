@@ -32,7 +32,7 @@ const printValues = [
 
 
 
-//function call on button to generatepassword click
+//function call on button to generate button click
   function generatePassword() 
   {
     let storeValue = "%dV142**0"; // the generated password variable
@@ -41,8 +41,6 @@ const printValues = [
     {
         
         let repeatValue = printValues[Math.floor(Math.random() * printValues.length)];
-
-
         storeValue += repeatValue();
         
     }

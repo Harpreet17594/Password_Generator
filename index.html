@@ -6,18 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- it will remove error of favicon icon -->
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
   </head>
   <body>
     <div class="wrapper">
+      <!-- header area -->
       <header>
         <h1>Password Generator</h1>
       </header>
+
+      <!-- card area -->
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
         
+        <!-- textarea -->
         <div class="card-body">
           <textarea
             readonly
@@ -26,14 +31,20 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        
+        <!--button generate code  -->
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
+
+        <!-- clear button to clear textarea -->
         <div class="card-footer">
           <button id="clear" class="btn">Clear Textarea</button>
         </div>
       </div>
     </div>
+
+    <!-- run.js linked -->
     <script src="./js/run.js"></script>
   </body>
 </html>
