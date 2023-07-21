@@ -6,8 +6,7 @@ const types = {
     specialCharacters: "!@#$%^&*()_+~\`|}{'[]:;?><,./-="
   }
 
-
-const printValues = [
+  const printValues = [
 
     // Function to randomly select an uppercase letters
     function upperCasedCharacters() {
@@ -31,21 +30,29 @@ const printValues = [
   ];
 
 
-
 //function call on button to generate button click
-  function generatePassword() 
-  {
-    let storeValue = "%dV142**0"; // the generated password variable
+function generatePassword() 
+{
+  let storeValue = ""; // the generated password variable
+  
+      let userInput = prompt("Please enter a password length between 8 and 128 characters");
+        console.log(typeof(userInput));
+        
+  
+        if (userInput>=8 && userInput<128){
+          let i = 0;
+            while(i<userInput)
+            {
+                let repeatValue = printValues[Math.floor(Math.random() * printValues.length)];
+                storeValue += repeatValue();
+                i=i+1;
+            }
+        }
+        
+  
+  return storeValue;
+}
 
-    while(storeValue.length>8 && storeValue.length<128)
-    {
-        
-        let repeatValue = printValues[Math.floor(Math.random() * printValues.length)];
-        storeValue += repeatValue();
-        
-    }
-    return storeValue;
-  }
 
 
 // Write password to the textarea
