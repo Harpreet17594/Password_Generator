@@ -80,6 +80,25 @@ const types = {
     return types.specialCharacters[Math.floor(Math.random() * types.specialCharacters.length)];
   }
 ];
+
+const withULS = [
+
+  // Function to randomly select an uppercase letters
+  function upperCasedCharacters() {
+    return types.upperCasedCharacters[Math.floor(Math.random() * types.upperCasedCharacters.length)];
+  },
+
+  // Function to randomly select a specialCharacters
+function specialCharacters() {
+return types.specialCharacters[Math.floor(Math.random() * types.specialCharacters.length)];
+},
+// Function to randomly select an lowercase letters
+function lowerCasedCharacters() {
+  return types.lowerCasedCharacters[Math.floor(Math.random() * types.lowerCasedCharacters.length)];
+}
+
+];
+
 //no numbers
 const nonumeric = [
 
@@ -112,6 +131,16 @@ function generatePassword()
                     storeValue += repeatValue();
                     i=i+1;
                 }
+              }
+              else
+              {
+                let i = 0;
+                while(i<userInput)
+                {
+                    let repeatValue = withULS[Math.floor(Math.random() * withULS.length)];
+                    storeValue += repeatValue();
+                    i=i+1;
+                }
               }  
             }
             else if(confirm("would you like to add numeric characters?"))
@@ -124,6 +153,16 @@ function generatePassword()
                   i=i+1;
               }
             }
+            else
+              {
+                let i = 0;
+                while(i<userInput)
+                {
+                    let repeatValue = nonumeric[Math.floor(Math.random() * nonumeric.length)];
+                    storeValue += repeatValue();
+                    i=i+1;
+                }
+              }
             
           }
           else if(confirm("would you like to add lower characters?"))
