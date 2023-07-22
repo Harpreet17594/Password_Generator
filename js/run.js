@@ -62,7 +62,32 @@ const types = {
       return types.specialCharacters[Math.floor(Math.random() * types.specialCharacters.length)];
     }
   ];
+ //no lower case but num sp upp 
+ const withUppercase = [
 
+      // Function to randomly select an uppercase letters
+      function upperCasedCharacters() {
+        return types.upperCasedCharacters[Math.floor(Math.random() * types.upperCasedCharacters.length)];
+      },
+  
+  // Function to randomly select a numericCharacters
+  function numericCharacters() {
+    return types.numericCharacters[Math.floor(Math.random() * types.numericCharacters.length)];
+  },
+
+  // Function to randomly select a specialCharacters
+  function specialCharacters() {
+    return types.specialCharacters[Math.floor(Math.random() * types.specialCharacters.length)];
+  }
+];
+//no numbers
+const nonumeric = [
+
+  // Function to randomly select a specialCharacters
+  function specialCharacters() {
+    return types.specialCharacters[Math.floor(Math.random() * types.specialCharacters.length)];
+  }
+];
 //function call on button to generate button click
 function generatePassword() 
 {
@@ -75,7 +100,7 @@ function generatePassword()
         {
           if(confirm("would you like to add uppercase letters?"))
           {
-            if(confirm("would you like to add lowercase letters?"))
+            if(confirm("would you like to add lowercase letters inside uppercase?"))
             {
               if(confirm("would you like to add numeric characters?"))
               {
@@ -89,6 +114,17 @@ function generatePassword()
                 }
               }  
             }
+            else if(confirm("would you like to add numeric characters?"))
+            {
+              let i = 0;
+              while(i<userInput)
+              {
+                  let repeatValue = withUppercase[Math.floor(Math.random() * withUppercase.length)];
+                  storeValue += repeatValue();
+                  i=i+1;
+              }
+            }
+            
           }
           else if(confirm("would you like to add lower characters?"))
           {
@@ -112,7 +148,21 @@ function generatePassword()
                   storeValue += repeatValue();
                   i=i+1;
               }
+          }
+          else 
+          {
+            let i = 0;
+            while(i<userInput)
+            {
+                let repeatValue = nonumeric[Math.floor(Math.random() * nonumeric.length)];
+                storeValue += repeatValue();
+                i=i+1;
+            }
           }      
+        }
+        else
+        {
+          alert("Please enter valid length between 8-128 "); 
         }
         
   return storeValue;
