@@ -69,9 +69,8 @@ function generatePassword()
   let storeValue = ""; // the generated password variable
   
       let userInput = prompt("Please enter a password length between 8 and 128 characters");
-        // console.log(typeof(userInput));
         
-  
+        //check user input   
         if (userInput>=8 && userInput<=128)
         {
           if(confirm("would you like to add uppercase letters?"))
@@ -80,6 +79,7 @@ function generatePassword()
             {
               if(confirm("would you like to add numeric characters?"))
               {
+                //generate password as per user input
                 let i = 0;
                 while(i<userInput)
                 {
