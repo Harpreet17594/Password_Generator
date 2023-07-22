@@ -2,6 +2,12 @@
 We will create password generator using html,css and javascript.Starter code is already given i need to work on java script mainly.
 ## Intermediate JavaScript: Password Generator
 I have create an app that runs in the browser and features dynamically updated HTML and CSS, all powered by JavaScript code that you will write. Your app will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+## Links
+        link to github repository    
+    https://github.com/Harpreet17594/Password_Generator
+    
+        link to deployed application
+    https://harpreet17594.github.io/Password_Generator/
 
 ## Instructions
         application must:
